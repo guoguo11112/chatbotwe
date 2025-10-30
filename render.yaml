@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: english-chat-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: DEEPSEEK_API_KEY
+        value: sk-68d19c1c956f40a8ac988e74856acfc4
